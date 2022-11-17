@@ -6,3 +6,5 @@ export default function linearSearch(haystack: number[], needle: number): boolea
     }
     return false
 }
+
+// Big O Notation = O(N)
