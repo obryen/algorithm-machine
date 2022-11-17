@@ -1,3 +1,4 @@
+// assumes haystack is ordered
 export function binarySearch(hayStack: number[], needle: number): boolean {
     let lo = 0;
     let hi = hayStack.length;
@@ -18,7 +19,15 @@ export function binarySearch(hayStack: number[], needle: number): boolean {
     return false;
 }
 
-const hashtack = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const needle = 5;
+// Big O Notation = O(log n)
 
+// problem: logic breaks down when array does not start from 0
+
+const hashtack = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+const needle = 15;
+
+const before = performance.now();
 console.log(binarySearch(hashtack, needle));
+const after = performance.now();
+
+console.log(`Time elapsed: ${(after - before) / 1000} seconds.`);
